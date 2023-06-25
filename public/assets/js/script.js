@@ -8,9 +8,9 @@ if(menuBtn){
     menuBtn.onclick = function(){
         if(sideNav.style.right == "-250px"){
             sideNav.style.right = 0
-            menu.src = "images/close.png"
+            menu.src = "assets/images/close.png"
         }else{
-            menu.src = "images/menu.png"
+            menu.src = "assets/images/menu.png"
             sideNav.style.right = "-250px"
         }
     }
