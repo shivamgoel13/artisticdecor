@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/artigqkc/artisticdecor.in
+    - export DEPLOYPATH=/home/public_html/
     - /bin/cp -R * $DEPLOYPATH    
