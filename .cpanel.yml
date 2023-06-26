@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/artigqkc/artisticdecor.in
-    - /bin cp * $DEPLOYPATH     
+    - /bin/cp -a * $DEPLOYPATH     
