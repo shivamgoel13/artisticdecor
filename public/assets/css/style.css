@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 #banner{
-    background: linear-gradient(rgba(0,0,0,0.5),#2c3e50),url(assets/images/image1.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5),#2c3e50),url(assets/images/banner.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
