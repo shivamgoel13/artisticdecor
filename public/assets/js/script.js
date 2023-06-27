@@ -44,4 +44,38 @@ openModalBtn.addEventListener("click", openModal);
 
 // Event listener to close the modal on close button click
 closeModalBtn.addEventListener("click", closeModal);
+
+let name = document.getElementById('name');
+let email = document.getElementById('email');
+let message = document.getElementById('message');
+let number = document.getElementById('number');
+
+modal.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let formData = {
+        name: name.value,
+        email:email.value,
+        message: message.value,
+        number: number.value
+    }
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST','/contactForm');
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.onload = function(){
+        if(xhr.responseText == 'Success'){
+            alert('Email Sent');
+            name.value = '',
+            email.value = '',
+            message.value = '',
+            number.value = ''
+        }else{
+            alert('Something went Wrong')
+        }
+    }
+    xhr.send(JSON.stringify(formData))
+})
+
+
+
+
 }

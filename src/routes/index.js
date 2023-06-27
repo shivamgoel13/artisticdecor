@@ -1,7 +1,6 @@
 const express = require("express");
-const path = require("path")
-
 const router = express.Router();
+const nodemailer = require('nodemailer');
 
 router.get('/', (req,res) =>{
     res.render("homepage")
@@ -45,6 +44,37 @@ router.get('/walls', (req,res) =>{
       
     res.render("walls", {products:products})
 })
+router.post('/contactForm', (req, res) =>{
+    const { name, email, message, number } = req.body;
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'contactartisticdecor@gmail.com',
+          pass: 'gitiamikcgkedacw',
+        },
+      });
+      const mailOptions = {
+        from: email,
+        to: 'contactartisticdecor@gmail.com',
+        subject: 'New Contact Form Submission on artistic Decor',
+        text: `
+          Name: ${name}
+          Email: ${email}
+          Number: ${number}
+          Message: ${message}
+        `,
+      };
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+          res.send('Error');
+        } else {
+          console.log('Email sent: ' + info.response);
+          res.send('Success');
+        }
+      });
+    });
 
 
 module.exports = router;
