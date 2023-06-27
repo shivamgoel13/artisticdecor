@@ -44,6 +44,50 @@ router.get('/walls', (req,res) =>{
       
     res.render("walls", {products:products})
 })
+router.get('/ceilings', (req,res) =>{
+  const products = [
+    "SOFFIT INFRATOP BROWN PANEL",
+    "SOFFIT INFRATOP WALNUT PANEL",
+    "SOFFIT INFRATOP OAK PANEL",
+    "SOFFIT INFRATOP WHITE PANEL",
+    "SOFFIT INFRATOP OAK WINCHESTER PANEL",
+    "SOFFIT INFRATOP GRAPHITE PANEL",
+    "SOFFIT INFRATOP GOLDEN OAK PANEL"
+  ];
+    
+  res.render("ceilings", {products:products})
+})
+router.get('/facades', (req,res) =>{
+  const products = [
+    "KERRAFRONT - WOOD EFFECT, CONCRETE OAK",
+    "KERRAFRONT - WOOD EFFECT, MALT OAK",
+    "KERRAFRONT - WOOD EFFECT, ALPINE OAK",
+    "KERRAFRONT - WOOD EFFECT, CARAMEL OAK",
+    "FRONTO - SLAT PANEL WINCHESTER OAK",
+    "FRONTO - SLAT PANEL OAK",
+    "FRONTO - SLAT PANEL NUT",
+    "FRONTO - SLAT PANEL HONEY OAK",
+    "FRONTO - SLAT PANEL GOLDEN OAK",
+    "MAX 3 - WINCHESTER OAK SXPU-05",
+    "MAX 3 - HONEY OAK SXPU-05",
+    "MAX 3 - OAK SXP-05",
+    "MAX 3 - GOLDEN OAK SXP-05",
+    "MAX 3 - BEECH SXP-05",
+    "MAX 3 - ASH SXP-05"
+  ];
+    
+  res.render("facades", {products:products})
+})
+router.get('/flooring', (req,res) =>{
+  const products = [
+    "SKIRTING BOARD ESPUMO ESP401",
+    "SKIRTING BOARD ESPUMO ESP301",
+    "SKIRTING BOARD ESPUMO ESP201",
+    "SKIRTING BOARD ESPUMO ESP101"
+  ];
+    
+  res.render("flooring", {products:products})
+})
 router.post('/contactForm', (req, res) =>{
     const { name, email, message, number } = req.body;
 

@@ -1,4 +1,14 @@
 var menuBtn = document.getElementById("menuBtn");
+var walls = document.getElementById("walls");
+var facades = document.getElementById("facades");
+var flooring = document.getElementById("flooring");
+var ceilings = document.getElementById("ceilings");
+
+walls.onclick = function(){window.location=`/walls`}
+facades.onclick = function(){window.location=`/facades`}
+flooring.onclick = function(){window.location=`/flooring`}
+ceilings.onclick = function(){window.location=`/ceilings`}
+
 if(menuBtn){
     var sideNav = document.getElementById("sideNav");
     var menu = document.getElementById("menu");
