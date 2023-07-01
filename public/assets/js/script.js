@@ -50,6 +50,7 @@ let email = document.getElementById('email');
 let message = document.getElementById('message');
 let number = document.getElementById('number');
 
+
 modal.addEventListener('submit', (e)=>{
     e.preventDefault();
     let formData = {

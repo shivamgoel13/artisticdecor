@@ -60,6 +60,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+    display: block; 
 }
 
 @media (min-aspect-ratio:16/9) {
